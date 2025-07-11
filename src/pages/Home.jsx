@@ -28,6 +28,7 @@ function Home() {
     const [productsBo, setProductsBo] = useState([])
 
     useEffect(() => {
+        console.log("✅ API_URL:", process.env.REACT_APP_API_URL);
         // Lấy top sản phẩm bán chạy (is_on_top = true)
         fetch(`${process.env.REACT_APP_API_URL}/api/products/top`)
             .then(res => res.json())
