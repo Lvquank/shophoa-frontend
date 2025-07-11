@@ -17,9 +17,9 @@ const Category = () => {
         if (!category) return;
         let apiUrl = '';
         if (category === 'ban-chay-nhat') {
-            apiUrl = 'http://127.0.0.1:8000/api/products/top';
+            apiUrl = `${process.env.REACT_APP_API_URL}/api/products/top`;
         } else {
-            apiUrl = `http://localhost:8000/api/products/category/${category}`;
+            apiUrl = `${process.env.REACT_APP_API_URL}/api/products/category/${category}`;
             if (style) {
                 apiUrl += `/${style}`;
             }

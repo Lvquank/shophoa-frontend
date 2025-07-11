@@ -29,7 +29,7 @@ function Home() {
 
     useEffect(() => {
         // Lấy top sản phẩm bán chạy (is_on_top = true)
-        fetch("http://localhost:8000/api/products/top")
+        fetch(`${process.env.REACT_APP_API_URL}/api/products/top`)
             .then(res => res.json())
             .then(data => {
                 if (data.success) setTopSellingProducts(data.data.slice(0, 4))
@@ -38,7 +38,7 @@ function Home() {
 
     // Hàm lấy sản phẩm theo category truyền vào
     const fetchCategoryProducts = (category, setProducts) => {
-        fetch(`http://localhost:8000/api/products/category/${category}`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/products/category/${category}`)
             .then(res => res.json())
             .then(data => {
                 if (data.success) {

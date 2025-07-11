@@ -18,7 +18,7 @@ const ProductDetail = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://127.0.0.1:8000/api/products/${productId}`);
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/products/${productId}`);
                 const data = await response.json();
 
                 if (data.success) {
