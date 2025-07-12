@@ -12,12 +12,7 @@ const CategoryGrid = ({ categoryCard = {}, products = [] }) => {
               <div className="position-relative h-100 overflow-hidden">
                 {categoryCard.imageUrl && (
                   <img
-                    src={
-                      categoryCard.imageUrl
-                        ? categoryCard.imageUrl.replace("http://localhost:8000", import.meta.env.VITE_API_URL)
-                        : "/placeholder.svg"
-                    }
-
+                    src={categoryCard.imageUrl || "/placeholder.svg"}
                     alt={categoryCard.title || "Category"}
                     className="category-img w-100 h-100"
                   />

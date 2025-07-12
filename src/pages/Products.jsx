@@ -42,7 +42,12 @@ const Products = () => {
                 >
                   <FlowerCard
                     key={product.id || index}
-                    imageUrl={product.image || hoaKhaiTruong}
+                    imageUrl={
+                      product.image
+                        ? product.image.replace("http://localhost:8000", import.meta.env.VITE_API_URL)
+                        : hoaKhaiTruong
+                    }
+
                     title={product.title}
                     buttonText="Đặt mua"
                     buttonType="order"
