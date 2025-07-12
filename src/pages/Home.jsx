@@ -181,7 +181,12 @@ function Home() {
                         <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <FlowerCard
                                 key={index}
-                                imageUrl={product.image}
+                                imageUrl={
+                                    product.image
+                                        ? product.image.replace("http://localhost:8000", import.meta.env.VITE_API_URL)
+                                        : hoaKhaiTruong
+                                }
+
                                 title={product.title}
                                 buttonText="Đặt mua"
                                 buttonType="order"
