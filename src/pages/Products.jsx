@@ -12,7 +12,7 @@ const Products = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/products`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then(res => res.json())
       .then(data => setProducts(data.data || []))
       .catch(err => console.error('Error fetching products:', err));
