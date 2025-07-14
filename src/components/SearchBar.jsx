@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -78,95 +78,102 @@ function SearchBar() {
                 </button>
                 <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Danh mục sản phẩm');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Danh mục sản phẩm
                             </div>
-                        </Link>
+                        </div>
                     </li>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Bán chạy nhất');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Bán chạy nhất
                             </div>
-                        </Link>
+                        </div>
                     </li>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Hoa Bó');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Hoa Bó
                             </div>
-                        </Link>
+                        </div>
                     </li>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Hoa Đám Tang');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Hoa Đám Tang
                             </div>
-                        </Link>
+                        </div>
                     </li>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Hoa Giỏ');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Hoa Giỏ
                             </div>
-                        </Link>
+                        </div>
                     </li>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Hoa Khai Trương');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Hoa Khai Trương
                             </div>
-                        </Link>
+                        </div>
                     </li>
                     <li>
-                        <Link
+                        <div
                             className="dropdown-item d-flex justify-content-between align-items-center"
                             onClick={() => {
                                 setSelectedCategory('Khuyến mãi');
                                 setIsOpen(false);
                             }}
+                            style={{ cursor: 'pointer' }}
                         >
                             <div>
                                 Khuyến mãi
                             </div>
-                        </Link>
+                        </div>
                     </li>
                 </ul>
             </div>
