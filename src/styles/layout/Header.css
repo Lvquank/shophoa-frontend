@@ -330,6 +330,38 @@ header {
   will-change: transform, opacity;
 }
 
+.user-menu {
+  cursor: pointer;
+}
+
+.user-menu .dropdown-menu {
+  margin-top: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-menu a:hover {
+  background-color: #f8f9fa;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #f0e5e5;
+}
+
+.auth-links .separator {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (max-width: 1200px) {
   header {
     padding: 0 2rem;

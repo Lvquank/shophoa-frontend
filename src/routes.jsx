@@ -11,7 +11,9 @@ import Contact from './pages/Contact';
 import NewsDetail from './pages/NewsDetail';
 import ProductDetail from './pages/ProductDetail';
 import Category from './pages/Category';
-import NewsDetail2 from './pages/NewsDetail2';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import AuthCallback from './pages/AuthCallback';
 function AppRoutes() {
   return (
     <Routes>
@@ -72,18 +74,10 @@ function AppRoutes() {
         }
       />
       <Route
-        path="/tin-tuc/1"
+        path="/tin-tuc/:id" // Sử dụng :id để khớp với /tin-tuc/1, /tin-tuc/2, v.v.
         element={
           <Layout isShowCategoryMenu={false}>
             <NewsDetail />
-          </Layout>
-        }
-      />
-      <Route
-        path="/tin-tuc/2"
-        element={
-          <Layout isShowCategoryMenu={false}>
-            <NewsDetail2 />
           </Layout>
         }
       />
@@ -116,6 +110,30 @@ function AppRoutes() {
         element={
           <Layout isShowCategoryMenu={false}>
             <Products />
+          </Layout>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <Layout isShowCategoryMenu={false}>
+            <Login />
+          </Layout>
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          <Layout isShowCategoryMenu={false}>
+            <Register />
+          </Layout>
+        }
+      />
+      <Route
+        path="/auth/callback"
+        element={
+          <Layout isShowCategoryMenu={false}>
+            <AuthCallback />
           </Layout>
         }
       />
