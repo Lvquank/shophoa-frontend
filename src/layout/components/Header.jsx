@@ -396,7 +396,6 @@ const Header = ({ isShowCategoryMenu = true }) => {
                                             {categories.map(category => {
                                                 const categoryStyles = category.styles || [];
                                                 const hasSubmenu = categoryStyles.length > 0;
-
                                                 if (hasSubmenu) {
                                                     return (
                                                         <li key={category.id} className="dropdown-submenu">
